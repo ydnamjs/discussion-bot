@@ -14,6 +14,8 @@ async function main() {
 	try {
 		console.log("Registering commands...");
 
+		console.log(COMMAND_LIST);
+
 		await rest.put(Routes.applicationGuildCommands(CLIENT_ID, GUILD_ID), {body: COMMAND_LIST});
 
 		console.log(`Successfully registered commands!`);
